@@ -1,0 +1,21 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employeeService.formDataList">
+      <th scope="row" (click)="onPopulate(employee)">{{employee.EmployeeID}}</th>
+      <td>{{employee.FullName}}</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td><button class="btn btn-danger" (click)="onDelete(employee.EmployeeID)">Delete</button></td>
+    </tr>
+ 
+  </tbody>
+</table>

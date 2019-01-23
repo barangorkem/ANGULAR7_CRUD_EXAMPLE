@@ -1,0 +1,22 @@
+<form #form="ngForm" (submit)="onSubmit(form)">
+    <input hidden class="form-control" [(ngModel)]="employeeService.formData.EmployeeID" name="EmployeeID"  placeholder="EmployeeID">
+
+  <div class="form-group">
+    <label for="Full Name">Full Name</label>
+    <input  class="form-control" [(ngModel)]="employeeService.formData.FullName" name="FullName"  placeholder="FullName">
+  </div>
+  <div class="form-group">
+    <label for="EMPCode">EMPCode</label>
+    <input  class="form-control" #EMPCode="ngModel" id="EMPCode" [(ngModel)]="employeeService.formData.EMPCode" name="EMPCode" placeholder="EMPCode">
+  </div>
+  <div class="form-group">
+    <label for="Mobile">Mobile</label>
+    <input  class="form-control" #Mobile="ngModel" id="Mobile" [(ngModel)]="employeeService.formData.Mobile" name="Mobile" placeholder="Mobile">
+  </div>
+  <div class="form-group">
+    <label for="Position">Position</label>
+    <input  class="form-control"  #Position="ngModel" id="Position" [(ngModel)]="employeeService.formData.Position" name="Position" placeholder="Position">
+  </div>
+  <button type="submit" style="float:right;" class="btn btn-danger">Submit</button>
+</form>
+<br/><br/>
